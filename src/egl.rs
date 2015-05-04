@@ -247,6 +247,7 @@ pub fn CopyBuffers(dpy: EGLDisplay, surface: EGLSurface, target: EGLNativePixmap
     }
 }
 
+#[link(name = "EGL")]
 extern {
     fn eglGetError() -> EGLint;
     fn eglGetDisplay(display_id: EGLNativeDisplayType) -> EGLDisplay;
