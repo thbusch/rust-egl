@@ -64,6 +64,8 @@ pub static EGL_BLUE_SIZE: c_uint = 0x3022;
 pub static EGL_GREEN_SIZE: c_uint = 0x3023;
 pub static EGL_RED_SIZE: c_uint = 0x3024;
 
+pub static EGL_NATIVE_VISUAL_ID: c_uint = 0x302E;
+
 pub static EGL_DRAW: EGLint = 0x3059;
 
 pub static EGL_CONTEXT_MAJOR_VERSION_KHR: c_uint = 0x3098;
