@@ -248,7 +248,7 @@ pub fn CopyBuffers(dpy: EGLDisplay, surface: EGLSurface, target: EGLNativePixmap
         return eglCopyBuffers(dpy, surface, target);
     }
 }
-pub fn GetProcAddress(procname: &str) {
+pub fn GetProcAddress(procname: &str) -> __eglMustCastToProperFunctionPointerType {
     unsafe {
         return eglGetProcAddress(procname.as_ptr() as *const c_char);
     }
@@ -289,5 +289,5 @@ extern {
     fn eglWaitNative(engine: EGLint) -> EGLBoolean;
     fn eglSwapBuffers(dpy: EGLDisplay, surface: EGLSurface) -> EGLBoolean;
     fn eglCopyBuffers(dpy: EGLDisplay, surface: EGLSurface, target: EGLNativePixmapType) -> EGLBoolean;
-    fn eglGetProcAddress(procname: *const c_char);
+    fn eglGetProcAddress(procname: *const c_char) -> __eglMustCastToProperFunctionPointerType;
 }
